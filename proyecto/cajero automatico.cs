@@ -72,13 +72,14 @@ namespace Cajero_Automatico
                             Console.WriteLine("1. ver retiro en pantalla  2. imprimir comprobante");
                             enter = Convert.ToInt32(Console.ReadLine());
                             {
-                                if (1 == enter) Console.WriteLine("su balance es de {0}", balance);
+                                if (1 == enter) Console.WriteLine("su retiro es de {0}", retiro);
 
                                 else
                                 {
                                     Console.WriteLine("comprobante fiscal:");
                                     Console.WriteLine("Nombre de cliente {0}", nombre);
                                     Console.WriteLine("direccion: {0}", direccion);
+                                    Console.writeLine("Balance: {0}", balance);
                                     Console.WriteLine("retiro: {0}", retiro);
                                 }
                                 Console.WriteLine("1. Continuar    2. Finalizar");
