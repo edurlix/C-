@@ -62,7 +62,7 @@ namespace Cajero_Automatico
                             Console.WriteLine("no tienes fondo suficiente");
                             Console.WriteLine("Ingrese el monto que deseas retirar");
                             retiro = Convert.ToInt32(Console.ReadLine());
-                        } while (balance < retiro);
+                        } while (balance == retiro);
                     }
                     {
 
@@ -85,7 +85,7 @@ namespace Cajero_Automatico
                                 Console.WriteLine("1. Continuar    2. Finalizar");
                                 end = Convert.ToInt32(Console.ReadLine());
                             }
-                        } while (balance < retiro);
+                        } while (balance == retiro);
                     }
                 }
                 /*tercera opcion*/
