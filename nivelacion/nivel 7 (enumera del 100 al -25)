@@ -1,0 +1,19 @@
+using System;
+
+namespace nivelacion1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int N = 100;
+            do
+            {
+                N -= 1;
+                Console.WriteLine(N);
+
+            } while (N > -25);
+
+        }
+    }
+}
