@@ -1,0 +1,29 @@
+using System;
+
+namespace nivelacion
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num, cuadrado, par, impar;
+            Console.Write("Ingrese el numero que deseas elevar al cuadrado: ");
+            num = Convert.ToInt32(Console.ReadLine());
+            cuadrado = num * num;
+            Console.WriteLine("el cuadrado de {0} es {1}", num, cuadrado);
+
+            if (num % 2 == 0) 
+            {
+                Console.WriteLine("es par");
+                par = cuadrado + 100;
+                Console.WriteLine(par);
+            }
+            else
+            { 
+                Console.WriteLine("es impar");
+                impar = cuadrado - 20;
+                Console.WriteLine(impar);
+            }
+        }
+    }
+}
