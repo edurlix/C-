@@ -1,0 +1,52 @@
+using System;
+
+namespace nivelacion1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int X, Y, Z, SUMAR, RESTAR, SALUDAR, OPCIONES;
+            string nombre;
+            Console.WriteLine("1. SUMAR     2. RESTAR     3. SALUDAR");
+            OPCIONES = Convert.ToInt32(Console.ReadLine());
+            //SUMAR*//
+                if (OPCIONES == 1)
+                {
+                    Console.Write("Ingrese el primer numero: ");
+                    X = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Ingrese el segundo numero: ");
+                    Y = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Ingrese el tercer numero: ");
+                    Z = Convert.ToInt32(Console.ReadLine());
+
+                    SUMAR = X + Y + Z;
+                    Console.WriteLine("LA SUMA DE {0} , {1} Y {2} ES {3}", X, Y, Z, SUMAR);
+                }
+                //RESTAR*//
+                else if (OPCIONES == 2)
+                {
+                    Console.Write("Ingrese el primer numero: ");
+                    X = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Ingrese el segundo numero: ");
+                    Y = Convert.ToInt32(Console.ReadLine());
+
+                    RESTAR = X - Y;
+                    Console.WriteLine("LA RESTA DE {0} y {1} ES {2}", X, Y, RESTAR);
+                }
+                //SALUDAR*//
+                else if (OPCIONES == 3)
+                {
+                    Console.Write("Ingrese su nombre ");
+                    nombre = Console.ReadLine();
+
+                    Console.WriteLine("Bienvenido {0}", nombre);
+
+                }
+                else
+                {
+                    Console.WriteLine("Usted no eligio ninguno de los tres");
+                }
+        }
+    }
+}
