@@ -1,0 +1,31 @@
+using System;
+
+namespace ConsoleApp10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numero = new int[10]; int i;
+            for (i = 0; i <= 9; i++)
+            {
+                Console.Write("introduzca el dato numerico {0}: ", i + 1);
+                numero[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            foreach (int number in numero)
+            {
+                Console.WriteLine(number);
+            }
+            Console.WriteLine();
+            Console.WriteLine("al revez seria");
+            Array.Reverse(numero);
+            foreach (int numbers in numero)
+            {
+                Console.WriteLine(numbers);
+
+            }
+               
+        }
+    }
+}
