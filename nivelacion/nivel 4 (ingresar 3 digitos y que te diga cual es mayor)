@@ -1,0 +1,31 @@
+using System;
+
+namespace nivelacion
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int X, Y, Z;
+            Console.Write("Ingrese un numero: ");
+            X = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Ingrese un segundo numero: ");
+            Y = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Ingrese un tercer numero: ");
+            Z = Convert.ToInt32(Console.ReadLine());
+
+            if (X > Y && X > Z)
+            {
+                Console.WriteLine("{0} es mayor que {1} y {2}", X, Y, Z);
+            }
+            else if(Y > X && Y > Z)
+            {
+                Console.WriteLine("{0} es mayor que {1} y {2}", Y, X, Z);
+            }
+            else
+            {
+                Console.WriteLine("{0} es mayor que {1} y {2}", Z, X, Y);
+            }
+        }
+    }
+}
