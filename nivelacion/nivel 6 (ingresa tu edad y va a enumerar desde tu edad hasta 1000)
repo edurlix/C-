@@ -1,0 +1,19 @@
+using System;
+
+namespace nivelacion1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int edad;
+            Console.Write("Ingrese su edad: ");
+            edad = Convert.ToInt32(Console.ReadLine());
+            while (edad < 1000)
+            {
+                edad++;
+                Console.WriteLine(edad);
+            }
+        }
+    }
+}
