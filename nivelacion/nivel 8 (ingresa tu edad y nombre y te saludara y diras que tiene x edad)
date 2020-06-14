@@ -1,0 +1,22 @@
+using System;
+
+namespace nivelacion1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            String NOMBRE;
+            int EDAD;
+            Console.Write("Ingrese su Nombre: ");
+            NOMBRE = Console.ReadLine();
+            Console.Write("Ingrese su Edad: ");
+            EDAD = Convert.ToInt32(Console.ReadLine());
+            for (int I = 1; I <= EDAD; I++)
+            {
+                Console.WriteLine("Hola {0} usted tiene {1}", NOMBRE, EDAD);
+            }
+
+        }
+    }
+}
