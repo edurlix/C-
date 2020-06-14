@@ -1,0 +1,268 @@
+using System;
+
+namespace Aplicacion_Electrodomesticos
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Nombre nombre = new Nombre();
+            nombre.name();
+
+             int elegir, opciones, seleccion, opc, select;
+            do
+            {
+                Console.WriteLine("//////////////////////////////////////////////////////////////////////////////////////////");
+                Console.WriteLine(" ");
+                Console.WriteLine("Elige un Electrodomestico: 1. Nevera   2. Estufa   3.microondas   4. Lavadora   5. Salir");
+                Console.WriteLine(" ");
+                Console.WriteLine("//////////////////////////////////////////////////////////////////////////////////////////");
+                elegir = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
+                if (elegir == 1)
+                {
+                    Console.WriteLine("1. abrir");
+                    opciones = Convert.ToInt32(Console.ReadLine());
+                    Console.Clear();
+                    if (opciones == 1)
+                    {
+                        nevera nevera = new nevera();
+                        nevera.abrir();
+                        Console.WriteLine("1. guardar algo   2. cerrar");
+                        seleccion = Convert.ToInt32(Console.ReadLine());
+                        Console.Clear();
+                        if (seleccion == 1)
+                        {
+                            nevera.enfriar();
+                            Console.WriteLine("1. Cerrar");
+                            opc = Convert.ToInt32(Console.ReadLine());
+                            Console.Clear();
+                            if (opc == 1)
+                                nevera.cerrar();
+                        }
+                        else
+                        {
+                            nevera.cerrar();
+                        }
+                    }
+                }
+                if (elegir == 2)
+                {
+                    Console.WriteLine("1. encender");
+                    opciones = Convert.ToInt32(Console.ReadLine());
+                    Console.Clear();
+                    if (opciones == 1)
+                    {
+                        estufa estufa = new estufa();
+                        estufa.encender();
+                        Console.WriteLine("1. bajar el fuego   2. apagar");
+                        seleccion = Convert.ToInt32(Console.ReadLine());
+                        Console.Clear();
+                        if (seleccion == 1)
+                        {
+                            estufa.bajar_el_fuego();
+                            Console.WriteLine("1. apagar estufa");
+                            opc = Convert.ToInt32(Console.ReadLine());
+                            Console.Clear();
+                            if (opc == 1)
+                            {
+                                estufa.apagar();
+                            }
+                        }
+                        else
+                        {
+                            estufa.apagar();
+                        }
+                    }
+                }
+                if (elegir == 3)
+                {
+                    Console.WriteLine("1. Abrir puerta ");
+                    opciones = Convert.ToInt32(Console.ReadLine());
+                    Console.Clear();
+                    if (opciones == 1)
+                    {
+                        microondas microonda = new microondas();
+                        microonda.abrir_puerta();
+                        Console.WriteLine("1. ingresar tiempo   2. cerrar");
+                        seleccion = Convert.ToInt32(Console.ReadLine());
+                        Console.Clear();
+                        if (seleccion == 1)
+                        {
+                            microonda.asignar_tiempo();
+                            Console.WriteLine("1. abrir microonda");
+                            select = Convert.ToInt32(Console.ReadLine());
+                            Console.Clear();
+                            microonda.abrir_puerta();
+                            Console.WriteLine("1. cerrar");
+                            opc = Convert.ToInt32(Console.ReadLine());
+                            Console.Clear();
+                            microonda.cerrar_puerta();
+                        }
+                        else
+                        {
+                            microonda.cerrar_puerta();
+                        }
+                    }
+                }
+                if (elegir == 4)
+                {
+                    Console.WriteLine("1. Abrir puerta ");
+                    opciones = Convert.ToInt32(Console.ReadLine());
+                    Console.Clear();
+                    if (opciones == 1)
+                    {
+                        lavadora lavadora = new lavadora();
+                        lavadora.abrir();
+                        Console.WriteLine("1. ingresar tiempo   2. cerrar");
+                        seleccion = Convert.ToInt32(Console.ReadLine());
+                        Console.Clear();
+                        if (seleccion == 1)
+                        {
+                            lavadora.ingresar_tiempo();
+                            Console.WriteLine("1. abrir lavadora");
+                            select = Convert.ToInt32(Console.ReadLine());
+                            Console.Clear();
+                            lavadora.abrir();
+                            Console.WriteLine("1. cerrar");
+                            opc = Convert.ToInt32(Console.ReadLine());
+                            Console.Clear();
+                            lavadora.cerrar();
+                        }
+                        else
+                        {
+                            lavadora.cerrar();
+                        }
+                    }
+                }
+
+            }
+            while (elegir != 5);
+            Console.WriteLine("Terminaste");
+            Console.Read();
+        }
+    }
+
+    //Electrodomestico 1
+    class nevera
+    {
+        //Atributos
+        private int ancho = 85, altura = 176;
+        private string color = "gris";
+
+        //metodos
+        public void abrir()
+        {
+            Console.WriteLine("abriste la nevera");
+        }
+
+        public void cerrar()
+        {
+            Console.WriteLine("Haz cerrado la nevera");
+        }
+
+        public void enfriar()
+        {
+            Console.WriteLine("lo haz guardado en la nevera");
+        }
+
+    }
+
+    //Electrodomestico 2
+    class estufa
+    {
+        //atributos
+        private int ancho = 91, altura = 76;
+        private string color = "gris";
+
+        //metodos
+        public void encender()
+        {
+            Console.WriteLine("Se ha encendido la estufa");
+        }
+
+        public void bajar_el_fuego()
+        {
+            Console.WriteLine("Haz bajado el fuego");
+        }
+
+        public void apagar()
+        {
+            Console.WriteLine("Se ha apagado la estufa");
+        }
+    }
+
+    //Electrodomestico 3
+    class microondas
+    {
+        //atributos
+        private int ancho = 50, altura = 50;
+        private string color = "Gris";
+
+        //metodos
+        public void abrir_puerta()
+        {
+            Console.WriteLine("Abriste la puerta de el microonda");
+        }
+
+        public void cerrar_puerta()
+        {
+            Console.WriteLine("Cerraste la puerta de el microonda");
+        }
+
+        public void asignar_tiempo()
+        {
+            int tiempo;
+            Console.Write("tiempo: ");
+            tiempo = Convert.ToInt32(Console.ReadLine());
+            for (int x = 0; x <= tiempo; x++)
+            {
+            Console.Write(x);
+            }
+            Console.WriteLine("Listo");
+        }
+    }
+
+    //Electrodomestico 4
+    class lavadora
+    {
+        //Atributos
+        private int ancho = 90, altura = 179;
+        private string color = "Rojo";
+        private string potencia = "500w";
+
+        //metodos
+        public void abrir()
+        {
+            Console.WriteLine("Abriste la puerta de la lavadora");
+        }
+
+        public void ingresar_tiempo()
+        {
+            int tiempo;
+            Console.Write("tiempo: ");
+            tiempo = Convert.ToInt32(Console.ReadLine());
+            for (int x = 0; x <= tiempo; x++)
+            {
+                Console.WriteLine(x);
+            }
+            Console.WriteLine("Listo");
+        }
+
+        public void cerrar()
+        {
+            Console.WriteLine("cerraste la puerta de la lavadora");
+        }
+    }
+
+    //Ultimo metodo Nombre
+    class Nombre
+    {
+        public void name()
+        {
+            Console.WriteLine("Nombre: Eddyson");
+            Console.WriteLine("Edad: 18");
+            Console.WriteLine("Sector: Piantini");
+        }
+    }
+}
